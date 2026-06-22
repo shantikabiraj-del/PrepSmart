@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="loadDashboardStats()">
+
+<div class="dashboard-layout">
+
+  <aside class="sidebar">
+    <h2 class="logo">PrepSmart</h2>
+
+    <nav class="side-menu">
+      <a href="#">Dashboard</a>
+      <a href="aptitude.html">Aptitude</a>
+      <a href="coding.html">Coding</a>
+      <a href="resume.html">Resume</a>
+      <a href="progress.html">Progress</a>
+      <a href="interview.html">Interview</a>
+      <a href="mentor.html">Career Mentor</a>
+      <a href="index.html">Logout</a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+
+    <section class="welcome-box">
+      <h1>Welcome, Student 👋</h1>
+      <p>Ready for today’s placement preparation?</p>
+    </section>
+
+    <section class="summary-cards">
+
+      <div class="card">
+        <h3 id="aptitudeCount">0</h3>
+        <p>Aptitude Completed</p>
+      </div>
+
+      <div class="card">
+        <h3 id="codingCount">0</h3>
+        <p>Coding Completed</p>
+      </div>
+
+      <div class="card">
+        <h3 id="interviewCount">0</h3>
+        <p>Interview Completed</p>
+      </div>
+
+      <div class="card">
+        <h3 id="overallPercent">0%</h3>
+        <p>Overall Progress</p>
+      </div>
+
+    </section>
+
+    <section class="quick-actions">
+      <h2>Quick Actions</h2>
+
+      <div class="action-buttons">
+        <a href="aptitude.html" class="action-btn">Start Quiz</a>
+        <a href="coding.html" class="action-btn">Practice Coding</a>
+         <a href="interview.html" class="action-btn">Mock Interview </a>
+        <a href="resume.html" class="action-btn">Update Resume</a>
+      </div>
+    </section>
+
+    <section class="recent-box">
+      <h2>Recent Activity</h2>
+      <p id="recentAptitude">Aptitude: 0 companies completed</p>
+      <p id="recentCoding">Coding: 0 companies completed</p>
+      <p id="recentInterview">Interview: 0 companies completed</p>
+    </section>
+
+    <section class="tip-box">
+      <h2>Daily Tip</h2>
+      <p>Solve 2 coding problems today to stay consistent.</p>
+    </section>
+
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

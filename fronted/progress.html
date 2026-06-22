@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="loadProgressDashboard()">
+
+<div class="progress-page">
+
+  <div class="progress-main-card">
+
+    <div class="progress-title">
+      <h1>📈 Progress Dashboard</h1>
+      <p>Track your overall preparation progress</p>
+    </div>
+
+    <div class="overview-grid">
+
+      <div class="overview-item">
+        <h2>Aptitude</h2>
+        <h3 id="aptPercent">0%</h3>
+        <div class="bar">
+          <div class="fill green" id="aptitude"></div>
+        </div>
+        <p id="aptText">0 of 4 completed</p>
+      </div>
+
+      <div class="overview-item">
+        <h2>Coding</h2>
+        <h3 id="codingPercent">0%</h3>
+        <div class="bar">
+          <div class="fill blue" id="coding"></div>
+        </div>
+        <p id="codingText">0 of 4 completed</p>
+      </div>
+
+      <div class="overview-item">
+        <h2>Interview</h2>
+        <h3 id="interviewPercent">0%</h3>
+        <div class="bar">
+          <div class="fill purple" id="interview"></div>
+        </div>
+        <p id="interviewText">0 of 4 completed</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="company-status-section">
+
+    <h1>🏢 Company Status</h1>
+    <p>Track your progress for each company</p>
+
+    <div class="company-progress-cards" id="companyStatus"></div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

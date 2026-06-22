@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interview Practice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="quiz-page">
+
+    <!-- Header -->
+    <div class="quiz-header">
+
+      <h1>🎤 Interview Practice</h1>
+
+      <a href="dashboard.html" class="home-btn">
+        Home
+      </a>
+
+    </div>
+
+    <!-- Company Cards -->
+    <div class="company-section">
+
+      <h2>Select Company</h2>
+
+      <div class="company-cards">
+
+        <div class="company-card" onclick="loadInterviewQuestions('TCS')">
+          <span>T</span>
+          <h3>TCS</h3>
+        </div>
+
+        <div class="company-card" onclick="loadInterviewQuestions('Infosys')">
+          <span>I</span>
+          <h3>Infosys</h3>
+        </div>
+
+        <div class="company-card" onclick="loadInterviewQuestions('Wipro')">
+          <span>W</span>
+          <h3>Wipro</h3>
+        </div>
+
+        <div class="company-card" onclick="loadInterviewQuestions('Accenture')">
+          <span>A</span>
+          <h3>Accenture</h3>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Interview Box -->
+    <div class="interview-box" id="interviewBox" style="display:none;">
+
+      <div class="question-count">
+        <span id="interview-number">
+          Select a company to start
+        </span>
+      </div>
+
+      <h2 id="interviewQuestion">
+        Choose a company above to load interview questions
+      </h2>
+
+      <textarea
+        id="answer"
+        placeholder="Write your answer here...">
+      </textarea>
+      <button
+    id="analyzeBtn"
+    class="quiz-btn"
+    onclick="analyzeInterviewAnswer()">
+    🤖 Analyze Answer
+</button>
+
+<div id="aiFeedback"></div>
+
+      <div id="interviewActions" style="display:none; margin-top:20px;">
+
+  <button class="action-btn" onclick="reviewInterview()">
+    Review Answers
+  </button>
+
+  <button class="action-btn" onclick="restartInterview()">
+    Restart Practice
+  </button>
+
+</div>
+
+      <div class="quiz-buttons">
+
+        <button
+          id="prevInterviewBtn"
+          class="quiz-btn"
+          onclick="previousInterviewQuestion()">
+          ← Previous
+        </button>
+
+        <button
+          class="quiz-btn"
+          onclick="nextInterviewQuestion()">
+          Next →
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

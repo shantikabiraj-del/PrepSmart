@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Aptitude Quiz</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="quiz-page">
+
+    <!-- Header -->
+    <div class="quiz-header">
+
+      <h1>🧠 Aptitude Quiz</h1>
+
+      <a href="dashboard.html" class="home-btn">
+        Home
+      </a>
+
+    </div>
+
+
+    <!-- Company Cards -->
+    <div class="company-section">
+
+      <h2>Select Company</h2>
+
+      <div class="company-cards">
+
+        <div class="company-card" onclick="loadCompanyQuestions('TCS')">
+          <span>T</span>
+          <h3>TCS</h3>
+        </div>
+
+        <div class="company-card" onclick="loadCompanyQuestions('Infosys')">
+          <span>I</span>
+          <h3>Infosys</h3>
+        </div>
+
+        <div class="company-card" onclick="loadCompanyQuestions('Wipro')">
+          <span>W</span>
+          <h3>Wipro</h3>
+        </div>
+
+        <div class="company-card" onclick="loadCompanyQuestions('Accenture')">
+          <span>A</span>
+          <h3>Accenture</h3>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- Quiz Box -->
+    <div class="quiz-box" id="quizBox" style="display:none;">
+
+      <div class="question-count">
+        <span id="question-number">
+          Select a company to start
+        </span>
+      </div>
+
+      <div class="progress">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <h2 id="question">
+        Choose a company above to load questions
+      </h2>
+
+      <div class="options">
+
+        <label>
+          <input type="radio" name="answer" value="0">
+          <span id="option0"></span>
+        </label>
+
+        <label>
+          <input type="radio" name="answer" value="1">
+          <span id="option1"></span>
+        </label>
+
+        <label>
+          <input type="radio" name="answer" value="2">
+          <span id="option2"></span>
+        </label>
+
+        <label>
+          <input type="radio" name="answer" value="3">
+          <span id="option3"></span>
+        </label>
+
+      </div>
+      <button
+  id="aptitudeAiBtn"
+  class="quiz-btn"
+  onclick="explainAptitudeQuestion()">
+  🤖 Explain Question
+</button>
+
+<div id="aptitudeAiFeedback"></div>
+     <div class="quiz-buttons">
+
+  <button class="quiz-btn" id="prevBtn"
+  onclick="previousQuizQuestion()">
+    ← Previous
+  </button>
+
+  <button class="quiz-btn"
+  onclick="nextQuizQuestion()">
+    Next →
+  </button>
+
+</div>
+
+      <p id="result"></p>
+      <div id="reviewBox"></div>
+     <div id="quizActions" style="display:none; margin-top:20px;">
+
+  <button class="action-btn" onclick="reviewQuiz()">
+    Review Questions
+  </button>
+
+  <button class="action-btn" onclick="restartQuiz()">
+    Restart Quiz
+  </button>
+
+</div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coding Practice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="coding-page">
+
+    <div class="quiz-header">
+      <h1>💻 Coding Practice</h1>
+      <a href="dashboard.html" class="home-btn">Home</a>
+    </div>
+
+    <div class="company-section">
+      <h2>Select Company</h2>
+
+      <div class="company-cards">
+
+        <div class="company-card" onclick="loadCodingQuestions('TCS')">
+          <span>T</span>
+          <h3>TCS</h3>
+        </div>
+
+        <div class="company-card" onclick="loadCodingQuestions('Infosys')">
+          <span>I</span>
+          <h3>Infosys</h3>
+        </div>
+
+        <div class="company-card" onclick="loadCodingQuestions('Wipro')">
+          <span>W</span>
+          <h3>Wipro</h3>
+        </div>
+
+        <div class="company-card" onclick="loadCodingQuestions('Accenture')">
+          <span>A</span>
+          <h3>Accenture</h3>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="code-box" id="codingBox" style="display:none;">
+
+      <div class="question-count">
+        <span id="coding-number">Select a company to start</span>
+      </div>
+
+      <h2 id="codingQuestion">
+        Choose a company above to load coding questions
+      </h2>
+
+      <textarea
+        id="codeInput"
+        placeholder="Write your code here..."></textarea>
+
+<button id="codingAiBtn" class="quiz-btn" onclick="getCodingHint()">
+  🤖 Get AI Hint
+</button>
+
+<div id="codingAiFeedback"></div>
+      <div class="quiz-buttons">
+
+        <button
+          id="prevCodingBtn"
+          class="quiz-btn"
+          onclick="previousCodingQuestion()">
+          ← Previous
+        </button>
+        <button
+  id="solvedBtn"
+  class="quiz-btn"
+  onclick="markCodingSolved()">
+  ✅ Mark as Solved
+</button>
+        <button
+          class="quiz-btn"
+          onclick="showCodingSolution()">
+          Show Solution
+        </button>
+
+        <button
+          class="quiz-btn"
+          onclick="nextCodingQuestion()">
+          Next →
+        </button>
+
+      </div>
+
+      <pre id="codingSolution"></pre>
+      <div id="codingActions" style="display:none; margin-top:20px;">
+
+  <button class="action-btn" onclick="reviewCoding()">
+    Review Solutions
+  </button>
+
+  <button class="action-btn" onclick="restartCoding()">
+    Restart Practice
+  </button>
+
+</div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

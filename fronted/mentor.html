@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Mentor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="mentor-page">
+
+  <div class="quiz-header">
+    <h1>🤖 Career Mentor</h1>
+    <a href="dashboard.html" class="home-btn">Home</a>
+  </div>
+
+  <div class="mentor-box">
+
+    <div id="mentorChat" class="mentor-chat">
+      <div class="ai-msg">
+        Hi! Ask me about placements, resume, interviews, coding, or company preparation.
+      </div>
+    </div>
+
+    <div class="mentor-input-box">
+      <input
+        type="text"
+        id="mentorInput"
+        placeholder="Ask your career question...">
+
+      <button class="quiz-btn" onclick="askCareerMentor()">
+        Send
+      </button>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

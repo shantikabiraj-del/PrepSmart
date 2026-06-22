@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Builder</title>
+
+  <!-- CSS LINK -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<section class="resume-page">
+
+  <h1 class="resume-title">Resume Builder</h1>
+
+  <p class="resume-subtitle">
+    Fill in your details and preview your resume
+  </p>
+
+  <div class="resume-container">
+
+    <!-- LEFT SIDE -->
+    <div class="resume-form">
+
+      <div class="form-header">
+
+        <div class="icon-circle">
+          ✏️
+        </div>
+
+        <h2>Build Your Resume</h2>
+
+      </div>
+      <label>Profile Image</label>
+
+      <input
+      type="file"
+      id="profileImage"
+      accept="image/*">
+
+      <label>Full Name</label>
+
+      <input
+      type="text"
+      id="name"
+      placeholder="Enter your full name">
+
+      <label>Email Address</label>
+
+      <input
+      type="email"
+      id="email"
+      placeholder="Enter your email address">
+
+      <label>Skills</label>
+
+      <textarea
+      id="skills"
+      placeholder="Enter your skills (HTML, CSS, JavaScript)">
+      </textarea>
+
+      <label>Education</label>
+
+      <textarea
+      id="education"
+      placeholder="Enter your education details">
+      </textarea>
+
+      <button onclick="handleResume()">
+        💾 Generate & Save Resume
+      </button>
+
+      <div class="info-box">
+        ℹ️ Your resume will be saved to database.
+      </div>
+
+      <p id="resumeMsg"></p>
+
+    </div>
+
+
+
+    <!-- RIGHT SIDE -->
+    <div class="preview-box">
+
+      <div class="preview-header">
+
+        <div class="icon-circle">
+          👁️
+        </div>
+
+        <h2>Resume Preview</h2>
+
+      </div>
+
+      <div class="preview-content">
+    <div class="profile-circle">
+
+  <img
+  id="previewImage"
+  src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+  alt="Profile">
+
+    </div>
+
+        <h3 id="showName">Your Name</h3>
+
+        <p id="showEmail">
+          yourmail@gmail.com
+        </p>
+
+        <hr>
+
+        <div class="preview-section">
+
+          <h4>📌 Skills</h4>
+
+          <p id="showSkills">
+            Your skills will appear here
+          </p>
+
+        </div>
+
+        <div class="preview-section">
+
+          <h4>🎓 Education</h4>
+
+          <p id="showEducation">
+            Your education details will appear here
+          </p>
+
+        </div>
+
+      </div>
+
+      <button onclick="downloadResume()">
+        ⬇ Download Resume
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- JS LINK -->
+<script src="script.js"></script>
+
+</body>
+</html>
